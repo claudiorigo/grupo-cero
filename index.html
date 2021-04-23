@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="image/logo_01.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+                    <img src="image/logo_01.png" alt="Grupo Cero" width="30" height="30" class="d-inline-block align-text-top">
                     Grupo Cero
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,55 +56,137 @@
                         </li>                        
                     </ul>
                     <form class="d-flex">
+                        <!-- Buscar -->
                         <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        <button class="btn btn-outline-success me-2" type="submit">Buscar</button>
+                        <!-- /Buscar -->
+
+                        <!-- Icono Login -->
+                        <a href="#loginModal" data-bs-toggle="modal" >
+                            <img src="image/user.png" alt="usuario" width="40" height="40" class="d-inline-block align-text-top">
+                        </a>
+                        <!-- /Icono Login -->
+                        <!-- Login Modal -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="loginModalLabel">Inicia Sesión</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">                                    
+                                        <div class="col-md-12 form-group">
+                                            <label for="usuario" class="form-label">Nombre Usuario</label>
+                                            <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario" data-rule="minlen:4">                        
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            <label for="password" class="form-label">Contraseña</label>
+                                            <input type="password" name="password" class="form-control" id="password" placeholder="Contraseña" data-rule="minlen:4">                        
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Iniciar Sesión</button>
+
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registrarModal">
+                                            Crear Cuenta
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                        <!-- /Login Modal -->
+
+                        <!-- Registrase Modal -->
+                        <div class="modal fade" id="registrarModal" tabindex="-1" aria-labelledby="registrarModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="registrarModalLabel">Crear Cuenta</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="col-md-12 form-group">
+                                        <label for="email" class="form-label">Correo Electronico</label>
+                                        <input type="text" name="email" class="form-control" id="email" placeholder="Correo" data-rule="minlen:4">                        
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label for="usuario" class="form-label">Nombre Usuario</label>
+                                        <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usuario" data-rule="minlen:4">                        
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <label for="password" class="form-label">Contraseña</label>
+                                        <input type="password" name="password" class="form-control" id="password" placeholder="Contraseña" data-rule="minlen:4">                        
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary">Crear</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Registrase Modal -->
                     </form>
                 </div>
             </div>
         </nav>
-    </header>
-
-    <!-- Principal -->
-    <main>
-        <!--Carousel-->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <!--Carousel-->        
+        <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
             <div class="carousel-inner">
                 <!--IMG_1 carrousel-->
                 <div class="carousel-item active">
-                    <img src="image/image_1.jpg" class="d-block w-100" alt="Tejidos">
+                    <img src="image/image_1.jpg" class="d-block w-100" alt="Pinturas">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Tejidos</h5>
-                        <p>Los mejores artesanos de tejidos de Chile.</p>
+                        <h5>Pinturas</h5>
+                        <p>Ven a conocer nuestra galeria de Pinturas.</p>
                     </div>
                 </div>
                 <!--IMG_2 carrousel-->
                 <div class="carousel-item">
-                    <img src="image/image_2.jpg" class="d-block w-100" alt="Pintura">
+                    <img src="image/image_2.jpg" class="d-block w-100" alt="Esculturas">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Pinturas</h5>
-                        <p>En esta sección encontraras la pintura que buscas.</p>
+                        <h5>Esculturas</h5>
+                        <p>Las mejores obras de todos los rincones de Chile.</p>
                     </div>
                 </div>
                 <!--IMG_3 carrousel-->
                 <div class="carousel-item">
-                    <img src="image/image_3.jpg" class="d-block w-100" alt="Escultura">
+                    <img src="image/image_3.jpg" class="d-block w-100" alt="Orfebrería">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Escultura</h5>
-                        <p>Salas de los mejores escultores de Chile.</p>
+                        <h5>Orfebrería</h5>
+                        <p>Conoce los trabajos de los mejores artesanos Chilenos.</p>
                     </div>
                 </div>
                 <!--IMG_4 carrousel-->
                 <div class="carousel-item">
-                    <img src="image/image_4.jpg" class="d-block w-100" alt="Escultura">
+                    <img src="image/image_4.jpg" class="d-block w-100" alt="Tejidos">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Escultura</h5>
-                        <p>Salas de los mejores escultores de Chile.</p>
+                        <h5>Tejidos</h5>
+                        <p>Una gran variedad de productos en lana.</p>
+                    </div>
+                </div>
+                <!--IMG_5 carrousel-->
+                <div class="carousel-item">
+                    <img src="image/image_5.jpg" class="d-block w-100" alt="Barbería">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Expresiones Artisticas</h5>
+                        <p>Reserva tu hora para Barbería Grupo Cero.</p>
+                    </div>
+                </div>
+                <!--IMG_6 carrousel-->
+                <div class="carousel-item">
+                    <img src="image/image_6.jpg" class="d-block w-100" alt="Cafetería">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Cafetería Grupo Cero</h5>
+                        <p>Nuestra cafeteria Grupo Cero te ofrece un comodo ambiente.</p>
                     </div>
                 </div>
             </div>
@@ -116,11 +198,34 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div>        
         <!--/Carousel-->
+    </header>
 
+    <!-- Principal -->
+    <main>
+        <!-- Imagenes -->        
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 mb-lg-0">
+                    <img src="image/gallery/img_01.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Pinturas"/>
+                    <img src="image/gallery/img_02.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Esculturas"/>        
+                </div>
+            
+                <div class="col-lg-4 col-md-4 mb-lg-0">
+                    <img src="image/gallery/img_03.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Orfebrería"/>
+                    <img src="image/gallery/img_04.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Tejidos"/>        
+                </div>
+            
+                <div class="col-lg-4 col-md-4 mb-lg-0">
+                    <img src="image/gallery/img_05.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Barbería"/>        
+                    <img src="image/gallery/img_06.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="Cafetería"/>
+                </div>
+            </div>
+        </div>        
+        <!-- /Imagenes -->
 
-        <!--Contacto-->
+        <!-- Contacto -->
         <div class="container mt-5">
             <form>
                 <div class="row">                    
@@ -145,8 +250,7 @@
                 </div>
             </form>    
         </div>
-        <!--/Contacto-->
-        
+        <!-- /Contacto -->
     </main>
 
     <!-- Pie de página -->
@@ -158,5 +262,6 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    
   </body>
 </html>
